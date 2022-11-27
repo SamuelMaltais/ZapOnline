@@ -19,6 +19,7 @@ var addPanierCount = (amount) =>{
 }
 $(document).ready(() => {
     var itemsPanier;
+    //valeure par defaut est de 0
     try{
         localStore.getItem("itemsPanier")
     }
