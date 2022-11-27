@@ -7,21 +7,23 @@ var checkCount = () => {
     }
     else{
         $(".count").css("visibility","visible");
+        $(".count").html(itemsPanier);
     }
 }
-// Ajoute une quantite x
+// Ajoute une quantite au count de panier
 var addPanierCount = (amount) =>{
-    var itemsPanier = localStorage.getItem("itemsPanier");
-    
+    var itemsPanier = parseInt(localStorage.getItem("itemsPanier"));
+    itemsPanier += amount;
+    localStorage.setItem("itemsPanier", itemsPanier);
+    checkCount();
 }
 $(document).ready(() => {
-    $("#hidden").click(() =>{
-        console.log("ok")
-        localStorage.setItem("itemsPanier", 1);
-        $(this).css("color","red");
-        checkCount();
-    })
     var itemsPanier;
-    localStorage.setItem("itemsPanier",0)
+    try{
+        localStore.getItem("itemsPanier")
+    }
+    catch{
+        localStorage.setItem("itemsPanier",0)
+    }
     checkCount();
 });
