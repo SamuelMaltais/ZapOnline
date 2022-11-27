@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- fait par Samuel Maltais 9/29/2022 -->
+<html lang="fr">
+<head>
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  <meta charset="UTF-8">
+  <title>Zap - Commande</title>
+</head>
+<body>
+  <div class="content">
+  <header>
+    <div class="header-content">
+    <a href="index.html"><img src="assets/img/logo.svg" alt="img"></a> 
+  <nav>
+    <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="products.html">Produits</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <a class="shopping-cart" href="shopping-cart.html" title="Panier">
+      <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+      <i class="fa fa-shopping-cart fa-stack-1x"></i>
+    </span>
+    <span class="count">3</span>
+    </a>
+    </ul>
+  </nav>
+  </div>
+  </header>
+  <main>
+    <div class="main-content">
+  <h1>Commande</h1>
+  <form action="confirmation.html">
+    <h2>Information de contact</h2>
+    <section id="contact" class="commande-row">
+      <div>
+      <p>Prenom</p>
+      <input id="firstname" type="text" placeholder="Votre prénom" required>
+    </div>
+    <div>
+      <p>Nom</p>
+      <input id="lastname "type="text" placeholder="Votre nom" required>
+    </div>
+    <div>
+      <p>Email</p>
+      <input id="email" type="email" placeholder="Votre email" required>
+    </div>
+    <div>
+      <p>Téléphone</p>
+      <input type="tel" id="phone" placeholder="###-####-####" required>
+    </div>
+    </section>
+    <h2>Info de paiement</h2>
+    <section id="paiement" class="commande-row">
+      <div>
+      <p>Num de carte de crédit</p>
+      <input id="credit-card" placeholder="....-....-....-...." required>
+      </div>
+      <div>
+      <p>Date d'expiration</p>
+      <input type="date" id="credit-card-expiry" required>
+      </div>
+    </div>
+    </section>
+    <div class="order-btn">
+      <button type="submit" class="btn">Payer ➜</button>
+    </div>
+    <br>
+  </form>
+</div>
+</main>
+<div class="push"></div>
+  </div>
+<footer>
+  <br>Fait par Samuel Maltais, matricule 20244617
+</footer>
+</body>
+</html>

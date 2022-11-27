@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- fait par Samuel Maltais 9/29/2022 -->
+<head>
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  <meta charset="UTF-8">
+  <title>Zap - Panier</title>
+</head>
+<body>
+  <div class="content">
+  <header>
+    <div class="header-content">
+    <a href="index.html"><img src="assets/img/logo.svg" alt="img"></a> 
+  <nav>
+    <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="products.html">Produits</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <a class="shopping-cart active" href="shopping-cart.html" title="Panier">
+      <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+      <i class="fa fa-shopping-cart fa-stack-1x"></i>
+    </span>
+    <span class="count">3</span>
+    </a>
+    </ul>
+  </nav>
+</div>
+  </header>
+  <main>
+    <div class="main-content">
+    <h1>Panier</h1>
+    <table class="panier">
+      <tr>
+        <th class="special"></th>
+        <th>Nom</th>
+        <th>Prix unitaire</th>
+        <th>Qantité</th>
+        <th class="prix-data">Prix</th>
+      </tr>
+      <tr style="border-bottom:1px solid black">
+        <td colspan="100%"><hr></td>
+      </tr>
+      <tr>
+        <td><i class="fa fa-solid fa-plus fa-1x cancel"></i></td>
+        <td><a href="product.html">Apple Tv</a></td>
+        <td>249.99$</td>
+        <td><i class="fa fa-solid fa-plus fa-1x"></i>    1    <i class="fa fa-solid fa-minus"></i></td>
+        <td class="prix-data">249.99$</td>
+      </tr>
+      <tr>
+        <td><i class="fa fa-solid fa-plus fa-1x cancel"></i></td>
+        <td><a href="product.html">Canon EOS 5D Mark II</a></td>
+        <td>2999.99$</td>
+        <td><i class="fa fa-solid fa-plus fa-1x"></i>    1    <i class="fa fa-solid fa-minus"></i></td>
+        <td class="prix-data">6000$</td>
+      </tr>
+      <tr>
+        <td><i class="fa fa-solid fa-plus fa-1x cancel"></i></td>
+        <td><a href="product.html">Nikon D7000</a></td>
+        <td>549.99$</td>
+        <td><i class="fa fa-solid fa-plus fa-1x"></i>    1    <i class="fa fa-solid fa-minus"></i></td>
+        <td class="prix-data">549.99$</td>
+      </tr>
+    </table>
+    <h4 id="prix-total">Total: XXXXXX $</h4>
+    <div class="add">
+    <button class="btn">Vider le panier</button><a class="btn" href="order.html">Commander ➜</a>
+  </div>
+  </main>
+  <div class="push"></div>
+</div>
+  <footer>
+    <br>Fait par Samuel Maltais, matricule 20244617
+  </footer>
+</body>
+</html>
