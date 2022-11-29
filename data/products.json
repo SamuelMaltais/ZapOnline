@@ -1,4 +1,4 @@
-var produits = [
+[
   {
     "id": 1,
     "name": "Apple TV",

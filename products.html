@@ -6,7 +6,6 @@
   <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
   <script src="./assets/scripts/header.js"></script>
-  <script src="./data/products.js"></script>
   <script src="./assets/scripts/products.js"></script>
   
   <meta charset="UTF-8">
@@ -39,66 +38,24 @@
     <section id="sidebar">
       <h2> Catégories </h2>
       <ul id="product-categories" class="product-buttons-container">
-        <button class="product-buttons product-buttons-top">Appareil photo</button>
-        <button class="product-buttons">Consoles</button>
-        <button class="product-buttons">Écrans</button>
-        <button class="product-buttons selected">Ordinateurs</button>
-        <button class="product-buttons product-buttons-bottom">Tous les produits</button>
+        <button class="product-buttons product-buttons-top" id="cameras">Appareil photo</button>
+        <button class="product-buttons" id="consoles">Consoles</button>
+        <button class="product-buttons" id="screens">Écrans</button>
+        <button class="product-buttons" id="computers">Ordinateurs</button>
+        <button class="product-buttons product-buttons-bottom selected" id="all">Tous les produits</button>
       </ul>
       <h2>Classements</h2>
     <ul id="product-criteria" class="product-buttons-container">
-      <button class="product-buttons">Prix (bas-haut)</button>
-      <button class="product-buttons selected">Prix (haut-bas)</button>
-      <button class="product-buttons">Nom (A-Z)</button>
-      <button class="product-buttons product-buttons-bottom">Nom (Z-A)</button>
+      <button class="product-buttons selected" id="bas-haut">Prix (bas-haut)</button>
+      <button class="product-buttons" id="haut-bas">Prix (haut-bas)</button>
+      <button class="product-buttons" id="a-z">Nom (A-Z)</button>
+      <button class="product-buttons product-buttons-bottom" id="z-a">Nom (Z-A)</button>
     </ul>
   </section>
     <section id="products">
       <h1>Produits</h1>
-      <h3>6 produits</h3>
+      <h3 id="produits-qte">6 produits</h3>
       <ol id="products-list">
-        <article>
-        <a href="product.html">
-          <h3>Apple TV</h3> 
-          <img src="assets/img/apple-tv.png" alt="Apple-TV">
-          <h4>Prix: 249.99</h4>
-        </a>
-      </article>
-      <article>
-        <a href="product.html">
-          <h3>Canon EOS 5D Mark II</h3> 
-          <img src="assets/img/camera-1.png" alt="Canon camera">
-          <h4>Prix: 2999.99</h4>
-        </a>
-      </article>
-      <article>
-      <a href="product.html">
-          <h3>Nikon D7000</h3> 
-          <img src="assets/img/camera-2.png" alt="Nikon camera">
-          <h4>Prix: 549.99</h4>
-        </a>
-      </article>
-      <article>
-        <a href="product.html">
-          <h3>Canon PowerShot SD1300</h3> 
-          <img src="assets/img/camera-3.png" alt="Canon-camera">
-          <h4>Prix: 299.99</h4>
-        </a>
-      </article>
-      <article>
-        <a href="product.html">
-          <h3>Portable</h3> 
-          <img src="assets/img/laptop-1.png" alt="Laptop">
-          <h4>Prix: 699.99</h4>
-        </a>
-      </article>
-      <article>
-        <a href="product.html">
-          <h3>Portable professionnel</h3> 
-          <img src="assets/img/laptop-2.png" alt="Laptop pro">
-          <h4>Prix: 599.99</h4>
-        </a>
-      </article>
       </ol>
     </section>
   </div>
