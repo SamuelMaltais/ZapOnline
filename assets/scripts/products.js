@@ -60,6 +60,7 @@ var organise = (list) => {
     }
 }
 var filtrerCategories = (categorie) => {
+    if(categorie == "all") return all;
     var list = [];
     for(item in produits){
         if(produits[item].category == categorie){
@@ -83,6 +84,13 @@ var changerOrg = (str) =>{
     genererPage(organise(currList))
     $("#"+organisation).addClass("selected")
 }
+var changerCategorie = (str) =>{
+    $(prevCat).removeClass("selected")
+    prevCat = "#" + str;
+    currList = filtrerCategories(str)
+    genererPage(organise(currList))
+    $("#"+str).addClass("selected")
+}
 $(document).ready(()=>{ 
     $.getJSON("data/products.json", (data) =>{
         produits = data
@@ -105,5 +113,19 @@ $(document).ready(()=>{
     $("#z-a").click(() =>{
         changerOrg("z-a")
     })
-
+    $("#computers").click(()=>{
+        changerCategorie("computers")
+    })
+    $("#all").click(()=>{
+        changerCategorie("all")
+    })
+    $("#screens").click(()=>{
+        changerCategorie("screens")
+    })
+    $("#consoles").click(()=>{
+        changerCategorie("consoles")
+    })
+    $("#cameras").click(()=>{
+        changerCategorie("cameras")
+    })
 });
