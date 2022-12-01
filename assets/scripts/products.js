@@ -73,7 +73,7 @@ var genererPage = (list) =>{
     $("#products-list").empty();
     for(let i = 0; i<list.length;i++){
         let product = produits[list[i]]
-        let element = `<article><a href="product.html"><h3>${product.name}</h3> <img src="assets/img/${product.image}" alt="ok"><h4>${product.price}</h4></a></article>`
+        let element = `<article><a href="product.html?id=${product.id}"><h3>${product.name}</h3> <img src="assets/img/${product.image}" alt="ok"><h4>${product.price}</h4></a></article>`
         $("#products-list").append(element)
     }
     $("#produits-qte").html(`${list.length} produits`)
