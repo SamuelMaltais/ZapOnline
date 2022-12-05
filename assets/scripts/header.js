@@ -21,9 +21,10 @@ $(document).ready(() => {
     var itemsPanier;
     //valeure par defaut est de 0
     try{
-        localStore.getItem("itemsPanier")
+        localStorage.getItem("itemsPanier")
     }
-    catch{
+    catch(err){
+        console.log(err)
         localStorage.setItem("itemsPanier",0)
     }
     checkCount();
