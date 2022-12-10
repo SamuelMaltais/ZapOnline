@@ -6,6 +6,8 @@
   <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
   <script src="./assets/scripts/header.js"></script>
+  <script src="./assets/scripts/shopping-cart.js"></script>
+
   
   <meta charset="UTF-8">
   <title>Zap - Panier</title>
@@ -25,7 +27,7 @@
       <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
       <i class="fa fa-shopping-cart fa-stack-1x"></i>
     </span>
-    <span class="count">3</span>
+    <span class="count"></span>
     </a>
     </ul>
   </nav>
@@ -34,43 +36,28 @@
   <main>
     <div class="main-content">
     <h1>Panier</h1>
+    <div class="panier-order">
     <table class="panier">
       <tr>
         <th class="special"></th>
         <th>Nom</th>
         <th>Prix unitaire</th>
-        <th>Qantité</th>
+        <th>Quantité</th>
         <th class="prix-data">Prix</th>
       </tr>
       <tr style="border-bottom:1px solid black">
         <td colspan="100%"><hr></td>
       </tr>
-      <tr>
-        <td><i class="fa fa-solid fa-plus fa-1x cancel"></i></td>
-        <td><a href="product.html">Apple Tv</a></td>
-        <td>249.99$</td>
-        <td><i class="fa fa-solid fa-plus fa-1x"></i>    1    <i class="fa fa-solid fa-minus"></i></td>
-        <td class="prix-data">249.99$</td>
-      </tr>
-      <tr>
-        <td><i class="fa fa-solid fa-plus fa-1x cancel"></i></td>
-        <td><a href="product.html">Canon EOS 5D Mark II</a></td>
-        <td>2999.99$</td>
-        <td><i class="fa fa-solid fa-plus fa-1x"></i>    1    <i class="fa fa-solid fa-minus"></i></td>
-        <td class="prix-data">6000$</td>
-      </tr>
-      <tr>
-        <td><i class="fa fa-solid fa-plus fa-1x cancel"></i></td>
-        <td><a href="product.html">Nikon D7000</a></td>
-        <td>549.99$</td>
-        <td><i class="fa fa-solid fa-plus fa-1x"></i>    1    <i class="fa fa-solid fa-minus"></i></td>
-        <td class="prix-data">549.99$</td>
-      </tr>
+
+      
+
     </table>
+
     <h4 id="prix-total">Total: XXXXXX $</h4>
     <div class="add">
-    <button class="btn">Vider le panier</button><a class="btn" href="order.html">Commander ➜</a>
-  </div>
+    <button class="btn" onclick="clearShoppingCart()">Vider le panier</button><a class="btn" href="order.html">Commander ➜</a>
+    </div>
+    </div>
   </main>
   <div class="push"></div>
 </div>

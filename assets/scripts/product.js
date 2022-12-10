@@ -1,9 +1,6 @@
 // A FAIRE ICI 
-// Tu trouves le product specifique avec le id
-// puis tu genere la page avec
 
 //Changer count du panier addPanierCount(quantite), qte peut etre negative
-
 //Le id que je t'ai provide
 
 
@@ -24,25 +21,30 @@ var productId = urlParam('id')
 ajouterItemPanier = (amountStr) => {
     var amount = parseInt(amountStr)
     try{
-        var jsonString = localStorage.getItem("shopping-cart")
-        var orderMap = JSON.parse(jsonString)
 
-        if (orderMap[productId] != null) {
+        var jsonString = localStorage.getItem("shopping-cart")
+
+        var orderMap = JSON.parse(jsonString)
+        
+
+        if (orderMap[productId] != null) {            
             orderMap[productId] += amount
+            
         } else {
             orderMap[productId] = amount
             var currentLen = localStorage.getItem("itemsPanier")
-            localStorage.setItem("itemsPanier", ++currentLen)
+            //localStorage.setItem("itemsPanier", ++currentLen)
         }
-
-        localStorage.setItem("shopping-cart", JSON.stringify(orderMap))
-        console.log(localStorage.getItem("itemsPanier"))
+        
+        localStorage.setItem("shopping-cart", JSON.stringify(orderMap))        
+        addPanierCount(amount)
     }
+ 
     catch {
         var orderMap = new Map();
         orderMap[productId] = amount
         localStorage.setItem("shopping-cart", JSON.stringify(orderMap))
-        localStorage.setItem("itemsPanier", 1)
+        localStorage.setItem("itemsPanier", amount)
     }
 }
 

@@ -2,7 +2,9 @@
 // Regarde si le count d'items dans le panier devrait etre visible
 var checkCount = () => {
     var itemsPanier = localStorage.getItem("itemsPanier");
-    if(itemsPanier == 0){
+    
+    //!itemPanier si itemPanier = null, null etant un falsy
+    if(itemsPanier == 0 | !itemsPanier){
         $(".count").css("visibility","hidden");
     }
     else{
@@ -10,6 +12,7 @@ var checkCount = () => {
         $(".count").html(itemsPanier);
     }
 }
+    
 // Ajoute une quantite au count de panier
 var addPanierCount = (amount) =>{
     var itemsPanier = parseInt(localStorage.getItem("itemsPanier"));
@@ -21,11 +24,11 @@ $(document).ready(() => {
     var itemsPanier;
     //valeure par defaut est de 0
     try{
-        localStorage.getItem("itemsPanier")
+        localStorage.getItem("itemsPanier")        
     }
     catch(err){
-        console.log(err)
-        localStorage.setItem("itemsPanier",0)
+        localStorage.setItem("itemsPanier", "0")
     }
+
     checkCount();
 });
