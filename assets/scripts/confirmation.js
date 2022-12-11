@@ -1,7 +1,7 @@
 $(document).ready(()=>{
     
-    localStorage.setItem("clientName", "clientName")
-    localStorage.setItem("confirmationNumber", "confirmationNumber")
+    //localStorage.setItem("clientName", "clientName")
+    //localStorage.setItem("confirmationNumber", "confirmationNumber")
 
     let clientName = localStorage.getItem("clientName")
     let confirmationNumber = localStorage.getItem("confirmationNumber")
