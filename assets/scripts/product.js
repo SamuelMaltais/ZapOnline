@@ -1,4 +1,4 @@
-// A FAIRE ICI
+//Fait par Felix Beaudoin, Samuel Maltais et Kelvin Chen
 
 //Changer count du panier addPanierCount(quantite), qte peut etre negative
 //Le id que je t'ai provide

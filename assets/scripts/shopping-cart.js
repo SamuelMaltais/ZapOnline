@@ -1,4 +1,4 @@
-//Changer count du panier addPanierCount(quantite), qte peut etre negative
+//Fait par Felix Beaudoin, Samuel Maltais et Kelvin Chen
 // shoppingCartItems, [[idItem,quantité],...]
 //<a href="product.html?id=2">
 
@@ -26,7 +26,6 @@ var extraireItems = () => {
 };
 //bubble sort encore
 var trier = (names) => {
-  console.log(names);
   for (let k = names.length; k >= 0; k--) {
     for (let j = 0; j < k; j++) {
       if (j + 1 < k) {
@@ -41,12 +40,10 @@ var trier = (names) => {
       }
     }
   }
-  console.log(names);
-  console.log(shoppingCartItems);
+
   for (let i = 0; i < names.length; i++) {
     shoppingCartItems[i] = names[i][1];
   }
-  console.log(shoppingCartItems);
 };
 var ordreAlphabetique = () => {
   names = [];
@@ -134,7 +131,7 @@ var augmenterQuantite = (i) => {
   });
   updateLocalStorage();
 };
-
+//Retire item du panier
 var reduireQuantite = (i) => {
   if (shoppingCartItems[i][1] == 1) {
     return;
@@ -152,7 +149,7 @@ var reduireQuantite = (i) => {
     $("#product-prix-" + i).html((response.price * productQuantite).toFixed(2));
   });
 };
-
+// Nom qui sexplique tt seul lol
 var updatePrixTotal = (item) => {
   productId = item[0];
   productQuantity = item[1];
@@ -163,7 +160,7 @@ var updatePrixTotal = (item) => {
     $("#prix-total").html("Total: " + prixTotal.toFixed(2) + "$");
   });
 };
-
+//Aussi
 var clearShoppingCart = () => {
   shoppingCartItems = "";
   localStorage.setItem("shopping-cart", null);
