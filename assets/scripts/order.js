@@ -1,14 +1,16 @@
 //Fait par Felix Beaudoin, Samuel Maltais et Kelvin
-var finireCommande = () => {
+var finireCommande = (name) => {
   //On vide le panier first
+  console.log(name);
   localStorage.setItem("shopping-cart", null);
   localStorage.setItem("itemsPanier", 0);
   checkCount();
+  localStorage.setItem("clientName", name);
   try {
-    var temp = parseInt(getItem("confirmationNum", 0));
-    localStorage.setItem("confirmationNum", temp + 1);
+    var temp = parseInt(getItem("confirmationNumber", 0));
+    localStorage.setItem("confirmationNumber", temp + 1);
   } catch {
-    localStorage.setItem("confirmationNum", 1);
+    localStorage.setItem("confirmationNumber", "confirmationNumber");
   }
 };
 
@@ -28,7 +30,7 @@ $(document).ready(function () {
       },
     },
     submitHandler: function (form) {
-      finireCommande();
+      finireCommande($("#firstname").val());
       window.location.href = "confirmation.html";
       return false;
     },

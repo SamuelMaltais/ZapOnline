@@ -1,9 +1,10 @@
-var storage = 0;
-try {
-  storage = parseInt(localStorage.getItem("confirmationNum"));
-} catch {
-  console.log("...");
-}
 $(document).ready(() => {
-  $("#confirmationNum").html(storage);
+  //localStorage.setItem("clientName", "clientName")
+  //localStorage.setItem("confirmationNumber", "confirmationNumber")
+
+  let clientName = localStorage.getItem("clientName");
+  let confirmationNumber = localStorage.getItem("confirmationNumber");
+
+  $("#confirmation-number").html(confirmationNumber);
+  $("#client-name").html(clientName);
 });
